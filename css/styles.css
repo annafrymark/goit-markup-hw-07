@@ -51,6 +51,7 @@ body {
 }
 .logo--header {
   color: #000000;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -78,20 +79,18 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
+  position: relative;
 }
 .navigation__link:hover,
 .navigation__link:focus {
   color: var(--brand-color-second);
 }
-.navigation__portfolio {
-  color: var(--brand-color-second);
-}
 
-.navigation__active {
+.navigation__link--active {
   position: relative;
   color: var(--brand-color-second);
 }
-.navigation__active::after {
+.navigation__link--active::after {
   content: "";
   position: absolute;
   width: 53px;
@@ -585,19 +584,19 @@ figcaption {
 .footer__studio {
   margin-top: 60px;
 }
-.logo__footer {
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
+
 .logo--footer {
   color: var(--brand-color-third);
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-right: 0;
 }
 .footer__list {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
-.footer-contact {
+.footer__contact {
   font-size: 14px;
   font-style: normal;
   line-height: 1.7;
@@ -606,8 +605,8 @@ figcaption {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
 }
-.footer-contact:hover,
-.footer-contact:focus {
+.footer__contact:hover,
+.footer__contact:focus {
   color: var(--brand-color-second);
 }
 .address {
