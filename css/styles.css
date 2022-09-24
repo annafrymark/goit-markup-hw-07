@@ -259,7 +259,7 @@ ul {
   margin: 0;
   text-align: center;
 }
-.pictures_list {
+.picture_list {
   display: flex;
   flex-direction: row;
   min-width: 1170px;
@@ -654,13 +654,9 @@ figcaption {
   transition-property: background-color, fill;
 }
 
-.footer__icon {
+.social-icon--footer {
   fill: var(--brand-color-third);
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ 
 }
 .footer__link:focus-within,
 .footer__link:hover {
@@ -682,7 +678,7 @@ label[for="sign-up"] {
   margin-bottom: 20px;
   /* margin-left: 78px; */
 }
-.btn-sign-up {
+.sign-up__button {
   margin-left: 12px;
   margin-bottom: 94px;
   margin-top: 0;
@@ -751,8 +747,6 @@ label[for="sign-up"] {
   position: absolute;
   top: 8px;
   right: 8px;
-  /* width: 30px;
-  height: 30px; */
   background-color: var(--brand-color-third);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -784,7 +778,7 @@ label[for="sign-up"] {
   margin-top: 0;
 }
 
-.label__modal {
+.modal__label {
   display: block;
   position: relative;
   font-family: Roboto;
@@ -798,11 +792,11 @@ label[for="sign-up"] {
   margin-bottom: 10px;
 }
 
-.label__modal[type="input"] {
+.modal__label[type="input"] {
   outline: none;
 }
 
-.input__modal {
+.modal__input {
   width: 448px;
   height: 40px;
   border-radius: 4px;
@@ -814,7 +808,7 @@ label[for="sign-up"] {
   outline: none;
   z-index: 1;
 }
-.textarea__modal {
+.modal__textarea {
   width: 448px;
   height: 120px;
   resize: none;
@@ -828,7 +822,7 @@ label[for="sign-up"] {
   outline: none;
 }
 
-.textarea__modal > placeholder {
+.modal__textarea > placeholder {
   color: #75757580;
 }
 .modal__icon {
@@ -841,18 +835,18 @@ label[for="sign-up"] {
   z-index: 2;
   /* margin-right: 12px; */
 }
-.label__modal:focus-within {
+.modal__label:focus-within {
   border-color: var(--brand-color-second);
   fill: var(--brand-color-second);
 }
-.input__modal:focus {
+.modal__input:focus {
   border-color: var(--brand-color-second);
 }
-.textarea__modal:focus {
+.modal__textarea:focus {
   border-color: var(--brand-color-second);
 }
 
-.textarea__modal::placeholder {
+.modal__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
@@ -862,7 +856,7 @@ label[for="sign-up"] {
 /* .textarea__modal:not(:placeholder-shown) {
   border-color: rgba(33, 150, 243, 1);
 } */
-.policy-text__modal {
+.modal__policy-text {
   color: var(--brand-color-fourth);
   font-weight: 400;
   font-size: 14px;
@@ -876,15 +870,15 @@ label[for="sign-up"] {
   cursor: pointer;
 }
 
-.policy-text__modal--statement {
+.modal__statement {
   font-weight: 400;
   font-size: 14px;
 }
-.policy-text__modal--statement > a {
+.modal__statement > a {
   color: var(--brand-color-second);
   text-decoration: underline;
 }
-.policy__modal {
+.modal__policy {
   appearance: none;
 }
 .accept__icon {
@@ -897,7 +891,7 @@ label[for="sign-up"] {
   transition-property: background-color, border;
   padding: 4px 2px 3px 3px;
 }
-.policy-text__modal > svg {
+.modal__policy-text > svg {
   position: absolute;
   transform: translateY(50%);
   bottom: 15px;
@@ -915,13 +909,13 @@ label[for="sign-up"] {
   background-color: var(--brand-color-second);
   border: var(--brand-color-second);
  } */
-.policy__modal:checked + .accept__icon {
+.modal__policy:checked + .accept__icon {
   background-color: var(--brand-color-second);
   border: var(--brand-color-second);
   fill: var(--brand-color-third);
   /* background-image: url(../images/); */
 }
-.btn__modal {
+.modal__btn {
   padding: 10px 76px;
   margin-bottom: 40px;
   margin-left: 124px;
