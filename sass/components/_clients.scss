@@ -1,0 +1,31 @@
+.clients {
+  display: flex;
+  gap: 30px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__logo {
+    border: solid 1px #afb1b8;
+    border-radius: 4px;
+    fill: #afb1b8;
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px 16px 32px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill, border-color;
+  }
+  &__item:focus-within svg,
+  &__item:hover svg {
+    fill: $brand-color-second;
+    border-color: $brand-color-second;
+  }
+
+  &__item:focus .clients__logo,
+  &__item:hover .clients__logo {
+    fill: $brand-color-second;
+  }
+}

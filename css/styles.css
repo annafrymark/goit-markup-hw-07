@@ -79,7 +79,6 @@ ul {
   color: #212121;
   display: flex;
   flex-direction: row;
-  /* -left: 46px; */
   margin-right: 46px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -368,10 +367,6 @@ ul {
   fill: #afb1b8;
   width: 20px;
   height: 20px;
-  /* width: 44px;
-  height: 44px;
-  border-radius: 50%;   
-  padding: 12px; */
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: fill, background-color;
@@ -399,21 +394,17 @@ ul {
         background-color: var(--brand-color-second);
       } */
 
-.Clients {
+.clients {
   display: flex;
   gap: 30px;
 }
 
-.Clients__item {
-  /* border: solid 1px #afb1b8;
-  border-radius: 4px; */
-  /* width: 170px;
-  height: 92px; */
+.clients__item {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.Clients__logo {
+.clients__logo {
   border: solid 1px #afb1b8;
   border-radius: 4px;
   /* width: 106px;
@@ -426,14 +417,14 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: fill, border-color;
 }
-.Clients__item:focus-within svg,
-.Clients__item:hover svg {
+.clients__item:focus-within svg,
+.clients__item:hover svg {
   fill: var(--brand-color-second);
   border-color: var(--brand-color-second);
 }
 
-.Clients__item:focus .Clients__logo,
-.Clients__item:hover .Clients__logo {
+.clients__item:focus .clients__logo,
+.clients__item:hover .clients__logo {
   fill: var(--brand-color-second);
 }
 /* Portfolio */
