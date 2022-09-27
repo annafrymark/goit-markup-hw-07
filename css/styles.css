@@ -262,7 +262,7 @@ ul {
   margin: 0;
   text-align: center;
 }
-.picture_list {
+.picture__list {
   display: flex;
   flex-direction: row;
   min-width: 1170px;

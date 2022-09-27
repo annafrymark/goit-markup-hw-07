@@ -84,10 +84,14 @@
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
     margin-bottom: 10px;
-  }
 
-  &__label[type="input"] {
-    outline: none;
+    &[type="input"] {
+      outline: none;
+    }
+    &:focus-within {
+      border-color: $brand-color-second;
+      fill: $brand-color-second;
+    }
   }
 
   &__input {
@@ -101,6 +105,10 @@
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
     z-index: 1;
+
+    &:focus {
+      border-color: $brand-color-second;
+    }
   }
   &__textarea {
     width: 448px;
@@ -113,11 +121,20 @@
     font-size: 12px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
+
+    & > placeholder {
+      color: #75757580;
+    }
+
+    &:focus {
+      border-color: $brand-color-second;
+    }
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
   }
 
-  &__textarea > placeholder {
-    color: #75757580;
-  }
   &__icon {
     position: absolute;
     bottom: 20px;
@@ -125,59 +142,47 @@
     transform: translateY(50%);
     z-index: 2;
   }
-  &__label:focus-within {
-    border-color: $brand-color-second;
-    fill: $brand-color-second;
-  }
-  &__input:focus {
-    border-color: $brand-color-second;
-  }
-  &__textarea:focus {
-    border-color: $brand-color-second;
-  }
-
-  &__textarea::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-  }
-
-  &__policy-text {
-    color: $brand-color-fourth;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 10px;
-    cursor: pointer;
-  }
 
   &__statement {
     font-weight: 400;
     font-size: 14px;
-  }
-  &__statement > a {
-    color: $brand-color-second;
-    text-decoration: underline;
+
+    & > a {
+      color: $brand-color-second;
+      text-decoration: underline;
+    }
   }
   &__policy {
     appearance: none;
-  }
 
-  &__policy-text > svg {
-    position: absolute;
-    transform: translateY(50%);
-    bottom: 15px;
-    left: 12px;
-  }
+    &-text {
+      color: $brand-color-fourth;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.71;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-top: 10px;
+      cursor: pointer;
 
-  &__policy:checked + .accept__icon {
-    background-color: $brand-color-second;
-    border: $brand-color-second;
-    fill: $brand-color-third;
-  }
-  &__btn {
+      & > svg {
+        position: absolute;
+        transform: translateY(50%);
+        bottom: 15px;
+        left: 12px;
+      }
+    }
+
+    &:checked + .accept__icon {
+      background-color: $brand-color-second;
+      border: $brand-color-second;
+      fill: $brand-color-third;
+    }
+  }}
+
+  .btn--modal {
     padding: 10px 76px;
     margin-bottom: 40px;
     margin-left: 124px;
@@ -186,4 +191,4 @@
     align-items: center;
     margin-top: 30;
   }
-}
+

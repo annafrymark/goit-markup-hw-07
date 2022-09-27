@@ -61,14 +61,14 @@
     </header>
 
     <main>
-      <section class="container buttons">
-        <ul class="btn__list">
-          <li><button class="btn" type="button">Wszystkie</button></li>
-          <li><button class="btn" type="button">Strony</button></li>
-          <li><button class="btn" type="button">Aplikacje</button></li>
-          <li><button class="btn" type="button">Dizajn</button></li>
-          <li><button class="btn" type="button">Marketing</button></li>
-        </ul>
+      <section class="container buttons-container">
+        <div class="buttons">
+          <button class="btn btn--filters" type="button">Wszystkie</button>
+          <button class="btn btn--filters" type="button">Strony</button>
+          <button class="btn btn--filters" type="button">Aplikacje</button>
+          <button class="btn btn--filters" type="button">Dizajn</button>
+          <button class="btn btn--filters" type="button">Marketing</button>
+        </div>
       </section>
 
       <section class="container project">
@@ -385,7 +385,7 @@
             id="sign-up"
             name="sign-up"
           />
-          <button type="submit" class="button sign-up__button">
+          <button type="submit" class="btn btn--signup">
             Zapisz się
             <svg class="icon-send" width="24" height="24">
               <use href="./images/icons.svg#icon-send"></use>

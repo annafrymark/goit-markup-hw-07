@@ -66,6 +66,17 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: fill, background-color;
+
+    &:focus-within,
+    &:hover {
+      fill: $brand-color-third;
+      background-color: $brand-color-second;
+    }
+
+    &:focus-within .social-icon,
+    &:hover .social-icon {
+      fill: $brand-color-third;
+    }
   }
 }
 
@@ -76,14 +87,4 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: fill, background-color;
-}
-.team__social-icon:focus-within,
-.team__social-icon:hover {
-  fill: $brand-color-third;
-  background-color: $brand-color-second;
-}
-
-.team__social-icon:focus-within .social-icon,
-.team__social-icon:hover .social-icon {
-  fill: $brand-color-third;
 }

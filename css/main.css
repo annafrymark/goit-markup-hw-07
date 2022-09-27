@@ -20,7 +20,6 @@ body {
           flex-direction: column;
   padding-left: 15px;
   padding-right: 15px;
-  /* align-items: center; */
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -49,7 +48,6 @@ body {
           align-items: center;
   border-bottom: 1px solid #eeeeee;
 }
-
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,7 +136,6 @@ ul {
           align-items: center;
   margin-left: 275px;
 }
-
 .contact__icons {
   fill: #757575;
   margin-right: 10px;
@@ -161,7 +158,6 @@ ul {
 .contact__icons:hover, .contact__icons:focus {
   fill: #2196f3;
 }
-
 .contact__header {
   color: #757575;
   font-size: 14px;
@@ -227,7 +223,7 @@ ul {
   padding: 0;
 }
 
-.button {
+.btn {
   color: #ffffff;
   background-color: #2196f3;
   font-family: "Roboto";
@@ -478,6 +474,13 @@ ul {
   -webkit-transition-property: fill, background-color;
   transition-property: fill, background-color;
 }
+.team__social-icon:focus-within, .team__social-icon:hover {
+  fill: #ffffff;
+  background-color: #2196f3;
+}
+.team__social-icon:focus-within .social-icon, .team__social-icon:hover .social-icon {
+  fill: #ffffff;
+}
 
 .social-icon {
   fill: #afb1b8;
@@ -491,33 +494,11 @@ ul {
   transition-property: fill, background-color;
 }
 
-.team__social-icon:focus-within,
-.team__social-icon:hover {
-  fill: #ffffff;
-  background-color: #2196f3;
-}
-
-.team__social-icon:focus-within .social-icon,
-.team__social-icon:hover .social-icon {
-  fill: #ffffff;
-}
-
 .clients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-}
-.clients__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .clients__logo {
   border: solid 1px #afb1b8;
@@ -533,6 +514,17 @@ ul {
   -webkit-transition-property: fill, border-color;
   transition-property: fill, border-color;
 }
+.clients__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .clients__item:focus-within svg, .clients__item:hover svg {
   fill: #2196f3;
   border-color: #2196f3;
@@ -542,34 +534,40 @@ ul {
 }
 
 /* Portfolio */
+.buttons-container {
+  padding-bottom: 0;
+  padding-top: 94px;
+}
+
 .buttons {
   padding-bottom: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.btn__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 34px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 50px;
 }
 
-.btn {
+.btn--filters {
   background-color: #f5f4fa;
+  color: #212121;
   border-width: 0;
   height: 38px;
+  width: 114px;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 500;
   line-height: 1.63;
-  border-radius: 3px;
   text-align: center;
   letter-spacing: 0.03em;
   padding: 6px 22px;
   cursor: pointer;
-  border-radius: 4px;
   margin-right: 8px;
   margin-bottom: 0;
   -webkit-transition-duration: 250ms;
@@ -581,7 +579,7 @@ ul {
   transition-property: color, background-color, box-shadow;
   transition-property: color, background-color, box-shadow, -webkit-box-shadow;
 }
-.btn:hover, .btn:focus {
+.btn--filters:hover, .btn--filters:focus {
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
@@ -852,7 +850,7 @@ label[for=sign-up] {
   margin-bottom: 20px;
 }
 
-.sign-up__button {
+.btn--signup {
   margin-left: 12px;
   margin-bottom: 94px;
   margin-top: 0;
@@ -982,6 +980,10 @@ label[for=sign-up] {
 .modal__label[type=input] {
   outline: none;
 }
+.modal__label:focus-within {
+  border-color: #2196f3;
+  fill: #2196f3;
+}
 .modal__input {
   width: 448px;
   height: 40px;
@@ -994,6 +996,9 @@ label[for=sign-up] {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   z-index: 1;
+}
+.modal__input:focus {
+  border-color: #2196f3;
 }
 .modal__textarea {
   width: 448px;
@@ -1010,21 +1015,6 @@ label[for=sign-up] {
 }
 .modal__textarea > placeholder {
   color: rgba(117, 117, 117, 0.5019607843);
-}
-.modal__icon {
-  position: absolute;
-  bottom: 20px;
-  left: 12px;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  z-index: 2;
-}
-.modal__label:focus-within {
-  border-color: #2196f3;
-  fill: #2196f3;
-}
-.modal__input:focus {
-  border-color: #2196f3;
 }
 .modal__textarea:focus {
   border-color: #2196f3;
@@ -1044,6 +1034,27 @@ label[for=sign-up] {
 .modal__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
+.modal__icon {
+  position: absolute;
+  bottom: 20px;
+  left: 12px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  z-index: 2;
+}
+.modal__statement {
+  font-weight: 400;
+  font-size: 14px;
+}
+.modal__statement > a {
+  color: #2196f3;
+  text-decoration: underline;
+}
+.modal__policy {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 .modal__policy-text {
   color: #757575;
   font-weight: 400;
@@ -1060,19 +1071,6 @@ label[for=sign-up] {
   margin-top: 10px;
   cursor: pointer;
 }
-.modal__statement {
-  font-weight: 400;
-  font-size: 14px;
-}
-.modal__statement > a {
-  color: #2196f3;
-  text-decoration: underline;
-}
-.modal__policy {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
 .modal__policy-text > svg {
   position: absolute;
   -webkit-transform: translateY(50%);
@@ -1085,7 +1083,8 @@ label[for=sign-up] {
   border: #2196f3;
   fill: #ffffff;
 }
-.modal__btn {
+
+.btn--modal {
   padding: 10px 76px;
   margin-bottom: 40px;
   margin-left: 124px;

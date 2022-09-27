@@ -2,15 +2,15 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eeeeee;
-}
-.header__container {
-  display: flex;
-  flex-direction: row;
-  padding-top: 0;
-  padding-bottom: 0;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .logo--header {
   color: #000000;
   margin: 0;
 }
-

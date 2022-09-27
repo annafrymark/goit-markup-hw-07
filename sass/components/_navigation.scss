@@ -26,23 +26,24 @@ ul {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color;
     position: relative;
-  }
-  &__link:hover,
-  &__link:focus {
-    color: $brand-color-second;
-  }
 
-  &__link--active {
-    position: relative;
-    color: $brand-color-second;
-  }
-  &__link--active::after {
-    content: "";
-    position: absolute;
-    width: 53px;
-    border-bottom: 4px solid $brand-color-second;
-    border-radius: 2px;
-    padding-top: 46px;
-    display: block;
+    &:hover,
+    &:focus {
+      color: $brand-color-second;
+    }
+
+    &--active {
+      position: relative;
+      color: $brand-color-second;
+    }
+    &--active::after {
+      content: "";
+      position: absolute;
+      width: 53px;
+      border-bottom: 4px solid $brand-color-second;
+      border-radius: 2px;
+      padding-top: 46px;
+      display: block;
+    }
   }
 }
